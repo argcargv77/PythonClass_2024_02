@@ -14,6 +14,13 @@ class Point:
     x = 0
     y = 0
     
+    # 생성자(constructor)
+    # 객체가 만들어지는 순간에 딱 한번 자동으로 호출되는 메서드
+    # __init__ 이름으로 정의한다
+    def __init__(self, x=None, y=None):
+        self.x = x
+        self.y = y
+        
     # 설정자(setter)
     # self : 자기 자신을 나타내는 객체, 클래스 내부의 속성과 메서드를 표현할 때 사용
     # 		반드시 메서드 첫번째 인수로 정의해야 함.
@@ -40,7 +47,18 @@ class Point:
 pt1 = Point()
 print(pt1.x, pt1.y)		# 0, 0
 pt1.message()
-pt1.SefPoint(100, 200)
+pt1.SetPoint(100, 200)
 print(pt1.x, pt1.y)		# 100, 200	이렇게 직접 접근 방식은 좋지 않음
 print(pt1.Getx(), pt1.Gety())		# 메서드를 이용해 간접 접근하는 것이 좋다
 pt1.displayPoint()
+
+pt2 = Point()
+pt2.SetPoint(300, 400)
+pt2.displayPoint()
+
+pt3 = Point()
+pt3.SetPoint(500, 600)
+pt3.displayPoint()
+
+pt4 = Point(700, 800)
+pt4.displayPoint()
