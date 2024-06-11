@@ -17,7 +17,7 @@ class Point:
     # 생성자(constructor)
     # 객체가 만들어지는 순간에 딱 한번 자동으로 호출되는 메서드
     # __init__ 이름으로 정의한다
-    def __init__(self, x=None, y=None):
+    def __init__(self, x=None, y=None):	# 파라미터 정의하는 과정에서 초깃값 설정 가능
         self.x = x
         self.y = y
         
